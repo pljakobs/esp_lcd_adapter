@@ -26,6 +26,7 @@ esp_err_t esp_lcd_adapter_init(uint16_t width, uint16_t height)
         .pclk_frequency_hz = 26000000U,
         .pclk_inverted     = false,
         .dma_buffer_size   = 10,
+        .frame_buffer_count = 2,
     };
 
     esp_err_t ret = display_driver_guition_4848s040_create(&cfg, &s_driver);
